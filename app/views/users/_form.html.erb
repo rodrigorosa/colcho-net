@@ -1,14 +1,8 @@
 <% if @user.errors.any? %>
 	<div id="error_explanation">
-		<h2>Infelizmente não foi possível completar a ação porque o formulário possui os seguintes erros:</h2>
-		<ul>
-			<% @user.errors.full_messages.each do |message| %>
-				<li> <%= message %> </li>
-			<% end %>
-		</ul>	
+		<%= t 'general.form_error' %>
 	</div>
 <% end %>
-
 
 <%= form_for @user do |f| %>
 	<p>
@@ -39,7 +33,7 @@
 	<p>
 		<%= f.label :bio %>
 		<%= f.text_area :bio %>
-		<%= error_tag @user, :bios %>
+		<%= error_tag @user, :bio %>
 	</p>
 	<p>
 		<%= f.submit %>

@@ -80,7 +80,7 @@ header nav {
 	margin: 0 auto;
 
 	h1 {
-	font-size: 1.5em;
+		font-size: 1.5em;
 	}
 
 	a, a:visited, a:hover {
@@ -105,12 +105,12 @@ form {
 	input[type=text], input[type=password], textarea {
 		color: #444;
 		font-size: 12px;
-		border: 1px solid #ccd;
+		border: 1px solid #ccc;
 		padding: 5px;
 		width: 350px;
 		outline: 0;
 
-		@include shadow(rgba(0,0,0,0.1), 0px, 0px, 8px);
+		@include shadow(rgba(0, 0, 0, 0.1), 0px, 0px, 8px);
 		&:focus {
 			border: 1px solid #c9c9c9;
 		}
@@ -147,7 +147,7 @@ form {
 
 .padded_flash {
 	padding: 10px;
-	margin: 10px;
+	margin: 10px 0;
 	font-weight: bold;
 	width: 500px;
 }
