@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131009022851) do
+ActiveRecord::Schema.define(:version => 20131015005053) do
 
   create_table "rooms", :force => true do |t|
     t.string   "title"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(:version => 20131009022851) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "password_digest"
+    t.datetime "confirmed_at"
+    t.string   "confirmation_token"
   end
 
 end

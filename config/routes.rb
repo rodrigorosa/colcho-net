@@ -3,7 +3,9 @@ Colchonet::Application.routes.draw do
 
   scope "(:locale)", locale: LOCALES do
     resources :rooms
-    resources :users    
+    resources :users 
+
+    resource :confirmation, only: [:show]   
   end
 
   get '/:locale' => 'home#index', locale: LOCALES
