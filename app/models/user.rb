@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
 	has_secure_password
 
+	scope :confirmed, -> { where.not(confirmed_at: nil) }
+
 	before_create do |user|
 		user.confirmation_token = SecureRandom.urlsafe_base64
 	end

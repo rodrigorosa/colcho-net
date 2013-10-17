@@ -9,9 +9,9 @@ class UsersController < ApplicationController
 	end
 
 	def create
-		@user = User.new(params[:user])
+		@user = User.new(user_params)
 		if @user.save
-			SignupMailer.confirm_email(@user).deliver
+			Signup.confirm_email(@user).deliver
 			redirect_to @user, notice: 'Cadastro criado com sucesso'
 		else
 			render action: :new
@@ -31,4 +31,10 @@ class UsersController < ApplicationController
 		end
 	end
 
+	private
+	def user_params
+		params.
+			require(:user).
+			permit(:email, :full_name, :location, :password, :password_confirmation, :bio)
+	end
 end

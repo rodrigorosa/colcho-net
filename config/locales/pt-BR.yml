@@ -1,4 +1,7 @@
 pt-BR:
+  flash:
+    notice:
+      signed_in: 'Autenticado'
   confirmations:
     success: Email confirmado com sucesso, obrigado!
   users:
@@ -15,6 +18,10 @@ pt-BR:
       title: Cadastro
     edit:
       title: 'Editar quarto'
+  user_sessions:
+    new:
+      title: 'Login'
+      sign_up: 'Cadastre-se'
   signup:
     confirm_email:
       subject: 'Colcho.net - Confirme seu email'
@@ -47,3 +54,15 @@ pt-BR:
         description: Descrição
         location: Localização
         title: Título
+  activemodel:
+    atributes:
+      user_session:
+        email: Email
+        password: Senha
+    errors:
+      messages:
+        invalid_login: 'Usuário ou senha inválidos'
+  helpers:
+    submit:
+      user_session:
+        create: 'Entrar'
