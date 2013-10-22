@@ -13,6 +13,8 @@ class UserSession
 	def authenticate!
 		user = User.authenticate(@email, @password)
 
+		puts user.full_name
+
 		if user.present?
 			store(user)
 		else

@@ -10,6 +10,13 @@ class User < ActiveRecord::Base
 
 	scope :confirmed, -> { where.not(confirmed_at: nil) }
 
+	def self.authenticate(email, password)
+		user = confirmed.where(email: email).try(:first)
+		if user.present?
+			user.authenticate(password)
+		end
+	end
+
 	before_create do |user|
 		user.confirmation_token = SecureRandom.urlsafe_base64
 	end
