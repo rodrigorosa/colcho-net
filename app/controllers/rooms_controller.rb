@@ -2,7 +2,7 @@ class RoomsController < ApplicationController
   before_action :require_authentication, only: [:new, :edit, :create, :update, :destroy]
 
   def index
-    @rooms = current_user.rooms.most_recent
+    @rooms = Room.most_recent
   end
 
   def show
