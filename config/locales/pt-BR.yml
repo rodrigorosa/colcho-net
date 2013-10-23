@@ -1,4 +1,6 @@
 pt-BR:
+  dialogs:
+    destroy: 'Tem certeza que quer remover?'
   flash:
     notice:
       signed_in: 'Login efetuado com sucesso!'
@@ -20,10 +22,17 @@ pt-BR:
         location: "Localização: %{location}"
         bio: "Bio: %{bio}"
   rooms:
+    index:
+      title: 'Quartos disponíveis'
+      new: 'Novo'
     new:
       title: Cadastro
     edit:
       title: 'Editar quarto'
+    room:
+      owner_html: '&mdash; %{owner} (%{when})'
+      edit: 'Editar'
+      destroy: 'Remover'
   user_sessions:
     new:
       title: 'Login'
