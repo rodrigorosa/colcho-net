@@ -46,3 +46,6 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 gem 'execjs'    # necessário para Linux
 gem 'therubyracer'  # necessário para Linux
+
+# Font Awesome
+gem 'font-awesome-rails'

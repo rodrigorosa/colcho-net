@@ -3,6 +3,7 @@
 		<% room.review_points.each do |point| %>
 			<%= f.radio_button :points, point %>
 			<%= f.label :points, point, value: point %>
+			<i class="icon-star"></i>
 		<% end %>
 
 		<%= f.submit %>

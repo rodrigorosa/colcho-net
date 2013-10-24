@@ -35,6 +35,14 @@ class RoomPresenter
 		Review::POINTS
 	end
 
+	def stars
+		@room.reviews.stars
+	end
+
+	def total_reviews
+		@room.reviews.size
+	end
+
 	# Faz com que a partial 'room' seja renderizada quando chamamos o 'render'
 	# com o objeto da classe room presenter.
 	def to_partial_path
