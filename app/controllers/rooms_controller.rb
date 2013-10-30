@@ -5,7 +5,10 @@ class RoomsController < ApplicationController
   # contendo o resultado do bloco. Dessa forma, para cada
   # quarto, retornaremos o presenter equivalente.
   def index
-    @rooms = Room.most_recent.map do |room|
+    @search_query = params[:q]
+    rooms = Room.search(@search_query)
+
+    @rooms = rooms.most_recent.map do |room|
       # Não exibiremos o formulário na listagem
       RoomPresenter.new(room, self, false)
     end

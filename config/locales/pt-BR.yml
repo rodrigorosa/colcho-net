@@ -25,6 +25,7 @@ pt-BR:
     index:
       title: 'Quartos disponíveis'
       new: 'Novo'
+      search_results: 'Resultado da busca'
     new:
       title: Cadastro
     edit:
@@ -39,6 +40,8 @@ pt-BR:
       stats:
         one: '(1 avaliação)'
         other: '(%{count} avaliações)'
+    search:
+      search_for: 'Buscar por...'
   user_sessions:
     new:
       title: 'Login'
