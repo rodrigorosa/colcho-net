@@ -34,7 +34,7 @@ pt-BR:
       owner_html: '&mdash; %{owner} (%{when})'
       edit: 'Editar'
       destroy: 'Remover'
-    review:
+    review_form:
       login_to_review: 'Faça o login para avaliar quartos'
     review:
       stats:
