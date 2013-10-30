@@ -1,4 +1,6 @@
 class RoomsController < ApplicationController
+  PER_PAGE = 5
+
   before_action :require_authentication, only: [:new, :edit, :create, :update, :destroy]
 
   # O método #map, de coleções, retornará um novo Array
@@ -6,12 +8,8 @@ class RoomsController < ApplicationController
   # quarto, retornaremos o presenter equivalente.
   def index
     @search_query = params[:q]
-    rooms = Room.search(@search_query)
-
-    @rooms = rooms.most_recent.map do |room|
-      # Não exibiremos o formulário na listagem
-      RoomPresenter.new(room, self, false)
-    end
+    rooms = Room.search(@search_query).page(params[:page]).per(PER_PAGE)
+    @rooms = RoomCollectionPresenter.new(rooms.most_recent, self)
   end
 
   def show

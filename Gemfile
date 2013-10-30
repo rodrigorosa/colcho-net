@@ -52,3 +52,6 @@ gem 'font-awesome-rails'
 
 # URL slug - ainda não está completamente preparada para rails4
 gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
+
+# Paginação
+gem 'kaminari'
