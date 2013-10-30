@@ -55,3 +55,7 @@ gem 'friendly_id', github: 'FriendlyId/friendly_id', branch: 'master'
 
 # Paginação
 gem 'kaminari'
+
+# Upload de fotos 
+gem 'carrierwave'
+gem 'rmagick'

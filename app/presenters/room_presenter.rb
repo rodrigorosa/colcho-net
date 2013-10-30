@@ -48,4 +48,17 @@ class RoomPresenter
 	def to_partial_path
 		'room'
 	end
+
+	#Imagem
+	def picture_url
+		@room.picture_url
+	end
+
+	def thumb_url
+		@room.picture.thumb.url
+	end
+
+	def has_picture?
+		@room.picture?
+	end
 end

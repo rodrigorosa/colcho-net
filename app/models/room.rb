@@ -1,6 +1,8 @@
 class Room < ActiveRecord::Base
 	extend FriendlyId
 
+	mount_uploader :picture, PictureUploader
+
 	validates_presence_of :title
 	validates_presence_of :slug
 	friendly_id :title, use: [:slugged, :history]
