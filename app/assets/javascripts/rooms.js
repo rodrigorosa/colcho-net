@@ -1,4 +1,5 @@
 $(function(){
+
 	var $review = $('.review');
 
 	$review.on('ajax:beforeSend', function(){
@@ -16,7 +17,6 @@ $(function(){
 	function replaceButton(container, icon_class, color) {
 		$(container).find('input:submit').replaceWith($('<i/>')).addClass(icon_class).css('color', color));
 	};
-
 	
 
 	function highlightStars(elem) {
@@ -24,7 +24,7 @@ $(function(){
 		elem.addClass('toggled').prevAll('label').addClass('toggled');
 	}
 
-	highlightStars($('.review input:checked + label'));
+	highlightStars($('.review input:chceked + label'));
 
 	var $stars = $('.review input:enabled ~ label');
 
