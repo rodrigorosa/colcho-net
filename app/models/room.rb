@@ -21,7 +21,7 @@ class Room < ActiveRecord::Base
 
 	def self.search(query)
 		if query.present?
-			where(['location LIKE :query OR title LIKE :query OR description LIKE :query',
+			where(['location ILIKE :query OR title ILIKE :query OR description ILIKE :query',
 							query: "%#{query}%"])
 		else
 			scoped
