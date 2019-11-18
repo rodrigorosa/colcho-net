@@ -1,10 +1,10 @@
 GIT
   remote: git://github.com/FriendlyId/friendly_id.git
-  revision: 0064ef1dd063043c5414612dae7691a0887b0ae6
+  revision: 25c1147357dfda267c1499ad29daf432e553c228
   branch: master
   specs:
-    friendly_id (5.0.1)
-      activerecord (~> 4.0.0)
+    friendly_id (5.3.0)
+      activerecord (>= 4.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -26,15 +26,14 @@ GEM
       activerecord-deprecated_finders (~> 1.0.2)
       activesupport (= 4.0.0)
       arel (~> 4.0.0)
-    activerecord-deprecated_finders (1.0.3)
+    activerecord-deprecated_finders (1.0.4)
     activesupport (4.0.0)
       i18n (~> 0.6, >= 0.6.4)
       minitest (~> 4.2)
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    arel (4.0.0)
-    atomic (1.1.14)
+    arel (4.0.2)
     bcrypt-ruby (3.0.1)
     builder (3.1.4)
     carrierwave (0.9.0)
@@ -48,12 +47,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    concurrent-ruby (1.1.5)
     erubis (2.7.0)
     execjs (2.0.2)
     font-awesome-rails (4.0.0.0)
       railties (>= 3.2, < 5.0)
     hike (1.2.3)
-    i18n (0.6.5)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     jbuilder (1.5.2)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
@@ -70,7 +71,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25)
     minitest (4.7.5)
-    multi_json (1.8.2)
+    multi_json (1.14.1)
     pg (0.17.0)
     polyglot (0.3.3)
     rack (1.5.2)
@@ -115,15 +116,14 @@ GEM
       libv8 (~> 3.16.14.0)
       ref
     thor (0.18.1)
-    thread_safe (0.1.3)
-      atomic
+    thread_safe (0.3.6)
     tilt (1.4.1)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
     turbolinks (1.3.0)
       coffee-rails
-    tzinfo (0.3.38)
+    tzinfo (0.3.56)
     uglifier (2.2.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
